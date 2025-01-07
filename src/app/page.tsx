@@ -10,11 +10,27 @@ export default function Home() {
   return (
     <>
       <div className="flex items-center justify-center relative top-3 w-full z-10">
+        <div>
+          <p>
+            Serenity <span>Technologies</span>
+          </p>
+        </div>
         <nav className="flex gap-1 p-0.5 border-white/15 rounded-full bg-white/15 backdrop-blur">
-          <a className="nav-item" href="#">Home</a>
-          <a className="nav-item" href="#">Projects</a>
-          <a className="nav-item" href="#">About</a>
-          <a className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900" href="#">Contact</a>
+          <a className="nav-item" href="#">
+            Home
+          </a>
+          <a className="nav-item" href="#">
+            Projects
+          </a>
+          <a className="nav-item" href="#">
+            About
+          </a>
+          <a
+            className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900"
+            href="#"
+          >
+            Contact
+          </a>
         </nav>
       </div>
       <HeroSection />
@@ -24,7 +40,6 @@ export default function Home() {
       <AboutSection />
       <ContactSection />
       <Footer />
-    
     </>
   );
 }
