@@ -9,10 +9,12 @@ import { Footer } from "@/sections/Footer";
 export default function Home() {
   return (
     <>
-      <div className="flex items-center justify-center relative top-3 w-full z-10">
+      <div className="flex items-center justify-around relative top-3 w-full z-10">
         <div>
-          <p>
-            Serenity <span>Technologies</span>
+          <p className="text-2xl font-bold">
+            <span className="bg-gradient-to-r from-green-400 to-sky-500 bg-clip-text text-transparent">
+              Serenity <span>Technologies</span>
+            </span>
           </p>
         </div>
         <nav className="flex gap-1 p-0.5 border-white/15 rounded-full bg-white/15 backdrop-blur">
