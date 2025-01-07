@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <div className="flex items-center justify-around relative top-3 w-full z-10">
         <div>
-          <p className="text-2xl font-bold">
+          <p className="text-3xl font-bold">
             <span className="bg-gradient-to-r from-green-400 to-sky-500 bg-clip-text text-transparent">
               Serenity <span>Technologies</span>
             </span>
