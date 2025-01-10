@@ -17,7 +17,7 @@ export default function Home() {
         <div className="flex items-center justify-around px-4">
           {/* Logo */}
           <p className="text-4xl font-bold">
-            <span className="text-4xl bg-gradient-to-r from-green-400 to-sky-500 bg-clip-text text-transparent">
+            <span className="text-xl md:text-2xl lg:text-4xl bg-gradient-to-r from-green-400 to-sky-500 bg-clip-text text-transparent">
               Serenity Technologies
             </span>
           </p>
@@ -66,7 +66,7 @@ export default function Home() {
             </a>
             <a
               className="nav-item md:px-4 py-2 text-lg md:text-xl rounded-lg hover:bg-white/20"
-              href="#"
+              href="contact"
             >
               Services
             </a>

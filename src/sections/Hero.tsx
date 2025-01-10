@@ -138,7 +138,7 @@ export const HeroSection = () => {
             Transforming complex business challenges into elegant software
             solutions. Your success is our code.
           </p>
-          <div className="flex flex-col m-auto w-[75%] md:flex-row mt-16 gap-4">
+          <div className="flex md:-[100%] flex-col m-auto w-[75%] md:flex-row mt-16 gap-4">
             <button className="inline-flex items-center gap-4 border border-white/15 px-6 h-12 rounded-lg hover:bg-white hover:text-black">
               <span className="font-bold">Explore my work here</span>
               <ArrowDown className="size-4" />

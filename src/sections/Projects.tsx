@@ -3,10 +3,25 @@ import CheckIcon from "@/assets/icons/check-circle.svg";
 import ArrowUp from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import netflixImage from "@/assets/images/netflix.png";
-import shopImage from "@/assets/images/shop.png"
-import foodImage from "@/assets/images/food.png"
+import shopImage from "@/assets/images/shop.png";
+import topmazImage from "@/assets/images/topmaz.png";
 
 const portfolioProjects = [
+  {
+    company: "Personal Project",
+    year: "2024",
+    title: "Automotive E-commerce and Inventory System",
+    results: [
+      { title: "Seemless user experience" },
+      {
+        title:
+          "Secure Authentication with jwt tokens and password hashing algorithms",
+      },
+      { title: "Payment intergration with Stripe(Stripe Testmode)" },
+    ],
+    link: "https://www.topmazautospares.com/",
+    image: topmazImage,
+  },
   {
     company: "Personal Project",
     year: "2024",
@@ -30,18 +45,6 @@ const portfolioProjects = [
     ],
     link: "https://shop-lemon.vercel.app/",
     image: shopImage,
-  },
-  {
-    company: "Personal Project",
-    year: "2024",
-    title: "Food Ordering Application",
-    results: [
-      { title: "Seemless user experience" },
-      { title: "Secure Authentication with jwt tokens and password hashing algorithms" },
-      { title: "Payment intergration with Stripe(Stripe Testmode)" },
-    ],
-    link: "https://platter-pal-frondend.vercel.app/",
-    image: foodImage,
   },
 ];
 
@@ -107,7 +110,11 @@ export const ProjectsSection = () => {
                   </ul>
 
                   {/* Button */}
-                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <button className="md:w-auto px-6 bg-white text-gray-900 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                       <span>View Live Projects</span>
                       <ArrowUp className="w-4 h-4" />
