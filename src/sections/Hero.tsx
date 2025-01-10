@@ -114,8 +114,8 @@ export const HeroSection = () => {
       </HeroOrbit>
       <div className="lg:ml-10 lg:mr-10 flex flex-col-reverse md:flex-row md:gap-20 items-center h-full justify-start">
         {/* Left side content */}
-        <div className="w-full md:w-1/2">
-          <h1 className="font-serif md:text-5xl text-2xl tracking-tight flex flex-col gap-2">
+        <div className="mt-10 w-full md:w-1/2">
+          <h1 className="font-serif text-center lg:text-left md:text-5xl text-2xl tracking-tight flex flex-col gap-2">
             {typedLines.map((line, index) => (
               <motion.span
                 key={index}
@@ -138,7 +138,7 @@ export const HeroSection = () => {
             Transforming complex business challenges into elegant software
             solutions. Your success is our code.
           </p>
-          <div className="flex flex-col md:flex-row mt-16 gap-4">
+          <div className="flex flex-col m-auto w-[75%] md:flex-row mt-16 gap-4">
             <button className="inline-flex items-center gap-4 border border-white/15 px-6 h-12 rounded-lg hover:bg-white hover:text-black">
               <span className="font-bold">Explore my work here</span>
               <ArrowDown className="size-4" />
@@ -151,7 +151,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Right side image */}
-        <div className="w-full md:w-1/2 h-full relative flex items-center justify-center overflow-hidden">
+        <div className="mt-10 w-full md:w-1/2 h-full relative flex items-center justify-center overflow-hidden">
           <div className="bg-green-500 size-2.5 rounded-full absolute z-10">
             <div className="bg-green-500 absolute inset-0 animate-ping-large rounded-full"></div>
           </div>

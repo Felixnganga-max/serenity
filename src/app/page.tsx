@@ -1,3 +1,4 @@
+"use client";
 import { HeroSection } from "@/sections/Hero";
 import { ProjectsSection } from "@/sections/Projects";
 import { TapeSection } from "@/sections/Tape";
@@ -5,35 +6,78 @@ import { TestimonialsSection } from "@/sections/Testimonials";
 import { AboutSection } from "@/sections/About";
 import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
+import { useState } from "react";
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <>
-      <div className="flex items-center justify-around relative top-3 w-full z-10">
-        <div>
-          <p className="text-3xl font-bold">
-            <span className="bg-gradient-to-r from-green-400 to-sky-500 bg-clip-text text-transparent">
-              Serenity
+      <div className="relative top-3 w-full z-10">
+        <div className="flex items-center justify-around px-4">
+          {/* Logo */}
+          <p className="text-4xl font-bold">
+            <span className="text-4xl bg-gradient-to-r from-green-400 to-sky-500 bg-clip-text text-transparent">
+              Serenity Technologies
             </span>
           </p>
-        </div>
-        <nav className="flex gap-1 p-0.5 border-white/15 rounded-full bg-white/15 backdrop-blur">
-          <a className="nav-item" href="#">
-            Home
-          </a>
-          <a className="nav-item" href="#">
-            Projects
-          </a>
-          <a className="nav-item" href="#">
-            About
-          </a>
-          <a
-            className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900"
-            href="#"
+
+          {/* Hamburger Icon */}
+          <button
+            className="md:hidden text-3xl"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            Contact
-          </a>
-        </nav>
+            {isMenuOpen ? "❌" : "🍔"}
+          </button>
+
+          {/* Navigation */}
+          <nav
+            className={`${
+              isMenuOpen ? "flex" : "hidden"
+            } flex-col md:flex md:flex-row md:gap-4 gap-2 p-4 md:p-0 absolute md:static top-full left-0 w-full md:w-auto backdrop-blur border md:border-0 rounded-lg md:rounded-none`}
+          >
+            <a
+              className="nav-item md:px-4 py-2 text-lg md:text-xl rounded-lg hover:bg-white/20"
+              style={{
+                backgroundColor: "white",
+                color: "black",
+              }}
+              href="#"
+            >
+              Home
+            </a>
+            <a
+              className="nav-item md:px-4 py-2 text-lg md:text-xl rounded-lg hover:bg-white/20"
+              href="#"
+            >
+              Projects
+            </a>
+            <a
+              className="nav-item md:px-4 py-2 text-lg md:text-xl rounded-lg hover:bg-white/20"
+              href="#"
+            >
+              About
+            </a>
+            <a
+              className="nav-item md:px-4 py-2 text-lg md:text-xl rounded-lg hover:bg-white/20"
+              href="#"
+            >
+              Contact
+            </a>
+            <a
+              className="nav-item md:px-4 py-2 text-lg md:text-xl rounded-lg hover:bg-white/20"
+              href="#"
+            >
+              Services
+            </a>
+            <a
+              className="nav-item md:px-4 py-2 text-lg md:text-xl rounded-lg hover:bg-white/20"
+              href="#"
+            >
+              Blog
+            </a>
+          </nav>
+        </div>
       </div>
       <HeroSection />
       <ProjectsSection />
