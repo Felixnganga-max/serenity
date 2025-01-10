@@ -11,7 +11,7 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "Serenity Technologies",
+  title: "SSTI",
   description: "Satisfactory solutions for a better tomorrow",
 };
 
