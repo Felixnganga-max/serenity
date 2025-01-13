@@ -37,41 +37,37 @@ export default function Home() {
             } flex-col md:flex md:flex-row md:gap-4 gap-2 p-4 md:p-0 absolute md:static top-full left-0 w-full md:w-auto backdrop-blur border md:border-0 rounded-lg md:rounded-none`}
           >
             <a
-              className="nav-item md:px-4 py-2 text-lg md:text-xl rounded-lg hover:bg-white/20"
-              style={{
-                backgroundColor: "white",
-                color: "black",
-              }}
+              className="nav-item md:px-4 py-2 text-sm font-[400] uppercase md:text-lg rounded-lg hover:bg-white/20"
               href="#"
             >
               Home
             </a>
             <a
-              className="nav-item md:px-4 py-2 text-lg md:text-xl rounded-lg hover:bg-white/20"
+              className="nav-item md:px-4 py-2 text-sm font-[400] uppercase md:text-lg  rounded-lg hover:bg-white/20"
               href="#"
             >
               Projects
             </a>
             <a
-              className="nav-item md:px-4 py-2 text-lg md:text-xl rounded-lg hover:bg-white/20"
+              className="nav-item md:px-4 py-2 text-sm font-[400] uppercase md:text-lg  rounded-lg hover:bg-white/20"
               href="#"
             >
               About
             </a>
             <a
-              className="nav-item md:px-4 py-2 text-lg md:text-xl rounded-lg hover:bg-white/20"
+              className="nav-item md:px-4 py-2 text-sm font-[400] uppercase md:text-lg  rounded-lg hover:bg-white/20"
               href="#"
             >
               Contact
             </a>
             <a
-              className="nav-item md:px-4 py-2 text-lg md:text-xl rounded-lg hover:bg-white/20"
-              href="contact"
+              className="nav-item md:px-4 py-2 text-sm font-[400] uppercase md:text-lg  rounded-lg hover:text-decoration-underline"
+              href="#"
             >
               Services
             </a>
             <a
-              className="nav-item md:px-4 py-2 text-lg md:text-xl rounded-lg hover:bg-white/20"
+              className="nav-item md:px-4 py-2 text-sm font-[400] uppercase md:text-lg  rounded-lg hover:bg-white/20"
               href="#"
             >
               Blog
