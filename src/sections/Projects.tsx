@@ -11,6 +11,7 @@ const portfolioProjects = [
     company: "Personal Project",
     year: "2024",
     title: "Automotive E-commerce and Inventory System",
+    alt: "automotive management system, with inventory and advanced security by serenity softwares and technological innovations",
     results: [
       { title: "Seemless user experience" },
       {
@@ -26,6 +27,7 @@ const portfolioProjects = [
     company: "Personal Project",
     year: "2024",
     title: "Netflix Clone Web Application",
+    alt: "Netflix clone, firebase authentication, modern technologies by serenity softwares and technological innovations",
     results: [
       { title: "Intergration with external API, in this case, the TMDB" },
       { title: "Advanced and secure authentication with firebase" },
@@ -38,6 +40,7 @@ const portfolioProjects = [
     company: "Personal Project",
     year: "2024",
     title: "Interactive Online Shopping Store",
+    alt: "Modern E-commerce website with inventory management, payment integration, and user authentication by Serenity Software.",
     results: [
       { title: "Filtering products on varied metrics" },
       { title: "Dynamic and smooth transitions" },
