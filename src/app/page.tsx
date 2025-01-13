@@ -18,7 +18,7 @@ export default function Home() {
           {/* Logo */}
           <p className="text-4xl font-bold">
             <span className="text-xl md:text-2xl lg:text-4xl bg-gradient-to-r from-green-400 to-sky-500 bg-clip-text text-transparent">
-              Serenity Technologies
+              Serenity Hi-Tech
             </span>
           </p>
 
