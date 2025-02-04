@@ -26,7 +26,7 @@ export default function RootLayout({
         className={twMerge(
           inter.variable,
           calistoga.variable,
-          "bg-[#1F2430] text-white antialiased font-sans"
+          "bg-gradient-to-b from-[#705103] to-[#341c02] text-white antialiased font-sans"
         )}
       >
         {children}

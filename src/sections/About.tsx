@@ -1,138 +1,119 @@
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
-import StarIcon from "@/assets/icons/star.svg";
-import book from "@/assets/images/book-cover.png";
 import Image from "next/image";
-import ReactIcon from "@/assets/icons/react.svg";
-import JavascriptIcon from "@/assets/icons/square-js.svg";
-import HtmlIcon from "@/assets/icons/html5.svg";
-import CssIcon from "@/assets/icons/css3.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
-import GitHubIcon from "@/assets/icons/github.svg";
 import React from "react";
-import mapImage from "@/assets/images/map.png";
-import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
-import { ToolBox } from "@/components/ToolBox";
-
-const toolBoxItems = [
-  {
-    title: "React",
-    iconType: ReactIcon,
-  },
-  {
-    title: "HTML5",
-    iconType: HtmlIcon,
-  },
-  {
-    title: "Javascript",
-    iconType: JavascriptIcon,
-  },
-  {
-    title: "Chrome",
-    iconType: ChromeIcon,
-  },
-  {
-    title: "Github",
-    iconType: GitHubIcon,
-  },
-  {
-    title: "CSS3",
-    iconType: CssIcon,
-  },
-];
-
-const hobbies = [
-  { title: "Music", emoji: "🎸", left: "50%", top: "50%" },
-  { title: "Environment", emoji: "🌳", left: "10%", top: "50%" },
-  { title: "Education", emoji: "🏫", left: "10%", top: "20%" },
-  { title: "Photography", emoji: "📷", left: "60%", top: "15%" },
-  { title: "Hiking", emoji: "👟", left: "45%", top: "30%" },
-  { title: "BootCamps", emoji: "👩‍💻", left: "70%", top: "30%" },
-  { title: "Reading", emoji: "🧾", left: "30%", top: "5%" },
-  { title: "BootCamps", emoji: "👩‍💻", left: "70%", top: "30%" },
-  { title: "Reading", emoji: "🧾", left: "70%", top: "0%" },
-];
+import Education from "@/assets/images/education.jpg";
+import Finance from "@/assets/images/finance.jpg";
+import Blockchain from "@/assets/images/blockchain.jpg";
 
 export const AboutSection = () => {
-  // const generateRandomPosition = () => {
-  //   const top = Math.random() * 40; // Limits the top position to 80% of the container height
-  //   const left = Math.random() * 80; // Limits the left position to 80% of the container width
-  //   return { top: `${top}%`, left: `${left}%` };
-  // };
-
   return (
-    <div className="py-16 lg:py-28">
-      <div className="container">
-        <SectionHeader
-          eyebrow="About Me"
-          title="A Glimpse into my World"
-          description="Learn More about the services you need to unlock your full potential"
-        />
-        <div className="mt-20 flex flex-col gap-6">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-            <Card className="h-[320px] md:col-span-2 lg:col-span-1">
-              <CardHeader
-                title="My Reads"
-                description="Explore the books shaping my perspectives"
-              />
-              <div className="w-40 mx-auto mt-2 md:mt-0">
-                <Image alt="book" src={book} />
-              </div>
-            </Card>
-
-            <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">
-              <CardHeader
-                className="px-6 pt-6"
-                title="My ToolBox"
-                description="Explore the tools we use in crafting your solutions"
-              />
-              <ToolBox className="mt-6 pr-6" toolBoxItems={toolBoxItems} />
-              <ToolBox className="mt-6 pr-6" toolBoxItems={toolBoxItems} />
-            </Card>
-
-            <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">
-              <CardHeader
-                className="px-6 py-6"
-                title="Beyond the Code"
-                description="Our Interests Beyond Technology"
-              />
-              <div className="relative w-full h-full">
-                {hobbies.map((hobby, index) => {
-                  // const position = generateRandomPosition();
-                  return (
-                    <div
-                      key={index}
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full absolute"
-                      style={{ top: hobby.top, left: hobby.left }}
-                    >
-                      <span className="font-medium text-gray-950">
-                        {hobby.title}
-                      </span>
-                      <span>{hobby.emoji}</span>
-                    </div>
-                  );
-                })}
-              </div>
-            </Card>
-
-            <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
-              <Image
-                className="w-full h-full object-cover"
-                alt="map Image"
-                src={mapImage}
-              />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute  after:inset-0 after:outline after:outiline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
-                <Image
-                  className="size-20"
-                  alt="smile memoji"
-                  src={smileMemoji}
-                />
-              </div>
-            </Card>
+    <div className="py-16 lg:py-28 relative overflow-hidden bg-gradient-to-br bg-gray-900 to-blue-950 text-white">
+      {/* Flaming Candle on the Left */}
+      <div className="absolute top-0 left-0 h-full w-16 flex items-center justify-center">
+        <div className="relative w-4 h-64 bg-yellow-900 rounded-t-lg">
+          <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
+            <div className="relative w-6 h-14">
+              <div className="absolute w-6 h-14 bg-yellow-400 rounded-full blur-sm animate-flicker"></div>
+              <div className="absolute w-8 h-16 bg-yellow-200 rounded-full blur-md opacity-50 animate-flicker"></div>
+              <div className="absolute w-3 h-6 bg-white rounded-full blur-sm top-0 left-1/2 transform -translate-x-1/2 animate-flicker"></div>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Flaming Candle on the Right */}
+      <div className="absolute top-0 right-0 h-full w-16 flex items-center justify-center">
+        <div className="relative w-4 h-64 bg-yellow-900 rounded-t-lg">
+          <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
+            <div className="relative w-6 h-14">
+              <div className="absolute w-6 h-14 bg-yellow-400 rounded-full blur-sm animate-flicker"></div>
+              <div className="absolute w-8 h-16 bg-yellow-200 rounded-full blur-md opacity-50 animate-flicker"></div>
+              <div className="absolute w-3 h-6 bg-white rounded-full blur-sm top-0 left-1/2 transform -translate-x-1/2 animate-flicker"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div className="container relative z-10">
+        <SectionHeader
+          eyebrow="Upcoming Services"
+          title="Explore Our Offerings"
+          description="Discover the innovative solutions we provide to help you achieve your goals"
+        />
+        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              title: "Financial Services",
+              description:
+                "Comprehensive financial solutions tailored to your needs",
+              image: Finance,
+            },
+            {
+              title: "Blockchain",
+              description:
+                "Cutting-edge blockchain technology for secure and transparent solutions",
+              image: Blockchain,
+            },
+            {
+              title: "Financial Service Software",
+              description:
+                "Advanced software solutions for financial management",
+              image: Finance,
+            },
+          ].map((service, index) => (
+            <Card
+              key={index}
+              className="h-[380px] flex flex-col items-center text-center bg-gray-800 rounded-xl shadow-lg p-4"
+            >
+              <CardHeader
+                title={service.title}
+                description={service.description}
+              />
+              <div className="w-full h-40 mt-4 relative rounded-lg overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-lg shadow-md"
+                />
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes flicker {
+          0% {
+            transform: translateX(0) translateY(0) scale(1);
+            opacity: 1;
+          }
+          25% {
+            transform: translateX(-3px) translateY(-2px) scale(1.2);
+            opacity: 0.9;
+          }
+          50% {
+            transform: translateX(2px) translateY(1px) scale(1.4);
+            opacity: 0.7;
+          }
+          75% {
+            transform: translateX(-2px) translateY(-1px) scale(1.3);
+            opacity: 0.85;
+          }
+          100% {
+            transform: translateX(0) translateY(0) scale(1);
+            opacity: 1;
+          }
+        }
+
+        .animate-flicker {
+          animation: flicker 1s infinite ease-in-out alternate;
+        }
+      `}</style>
     </div>
   );
 };

@@ -1,17 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import memojiComputer from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleImage from "@/assets/icons/sparkle.svg";
-import { HeroOrbit } from "@/components/HeroOrbit";
+import grainImage from "@/assets/images/grain.jpg";
 import heroImage from "@/assets/images/Hero1.png";
 import heroImageI from "@/assets/images/Hero2.png";
 import heroImageII from "@/assets/images/Hero3.jpeg";
-import { motion } from "framer-motion";
+import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
   const images = [heroImage, heroImageI, heroImageII];
@@ -60,7 +59,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <div className="py-5 md:py-10 lg:py-20 relative z-0 h-[90vh] overflow-x-clip">
+    <div className="py-5 md:py-10 lg:py-20 relative z-0 h-[88vh] overflow-x-clip">
       <div
         className="absolute inset-0 -z-30 opacity-5"
         style={{
@@ -71,47 +70,39 @@ export const HeroSection = () => {
       <div className="size-[550px] hero-ring"></div>
       <div className="size-[650px] hero-ring"></div>
       <div className="size-[750px] hero-ring"></div>
+
+      {/* Reduced size of rotating icons */}
       <HeroOrbit size={430} rotation={-14} shouldOrbit spinDuration="30s">
-        <SparkleImage className="size-8 text-emerald-300/20" />
-      </HeroOrbit>
-      {/* Other HeroOrbit components remain untouched */}
-      <HeroOrbit size={430} rotation={-14} shouldOrbit spinDuration="30s">
-        <SparkleImage className="size-8 text-emerald-300/20" />
+        <SparkleImage className="size-4 text-emerald-300/20" />
       </HeroOrbit>
       <HeroOrbit size={440} rotation={79} shouldOrbit spinDuration="32s">
-        <SparkleImage className="size-5 text-emerald-300/20" />
-      </HeroOrbit>
-      <HeroOrbit size={440} rotation={79} shouldOrbit spinDuration="34s">
-        <SparkleImage className="size-5 text-emerald-300/20" />
+        <SparkleImage className="size-3 text-emerald-300/20" />
       </HeroOrbit>
       <HeroOrbit size={520} rotation={-42} shouldOrbit spinDuration="36s">
-        <div className="w-2 h-2 bg-emerald-300/20 rounded-full"></div>
+        <div className="w-1.5 h-1.5 bg-emerald-300/20 rounded-full"></div>
       </HeroOrbit>
       <HeroOrbit size={530} rotation={178} shouldOrbit spinDuration="38s">
-        <SparkleImage className="size-10 text-emerald-300/20" />
+        <SparkleImage className="size-6 text-emerald-300/20" />
       </HeroOrbit>
       <HeroOrbit size={550} rotation={20} shouldOrbit spinDuration="40s">
-        <StarIcon className="size-12 text-emerald-300" />
+        <StarIcon className="size-8 text-emerald-300" />
       </HeroOrbit>
       <HeroOrbit size={590} rotation={98} shouldOrbit spinDuration="50s">
-        <StarIcon
-          className="size-8 text-emerald-300"
-          shouldOrbit
-          spinDuration="30s"
-        />
+        <StarIcon className="size-6 text-emerald-300" />
       </HeroOrbit>
       <HeroOrbit size={650} rotation={-5} shouldOrbit spinDuration="42s">
-        <div className="w-2 h-2 bg-emerald-300/20 rounded-full"></div>
+        <div className="w-1.5 h-1.5 bg-emerald-300/20 rounded-full"></div>
       </HeroOrbit>
       <HeroOrbit size={710} rotation={144} shouldOrbit spinDuration="44s">
-        <SparkleImage className="size-14 text-emerald-300/20" />
+        <SparkleImage className="size-8 text-emerald-300/20" />
       </HeroOrbit>
       <HeroOrbit size={720} rotation={88} shouldOrbit spinDuration="46s">
-        <div className="w-3 h-3 bg-emerald-300/20 rounded-full"></div>
+        <div className="w-2 h-2 bg-emerald-300/20 rounded-full"></div>
       </HeroOrbit>
       <HeroOrbit size={800} rotation={-72} shouldOrbit spinDuration="48s">
-        <StarIcon className="size-28 text-emerald-300" />
+        <StarIcon className="size-16 text-emerald-300" />
       </HeroOrbit>
+
       <div className="lg:ml-10 lg:mr-10 flex flex-col-reverse md:flex-row md:gap-20 items-center h-full justify-start">
         {/* Left side content */}
         <div className="mt-10 w-full md:w-1/2">
@@ -139,11 +130,11 @@ export const HeroSection = () => {
             solutions. Your success is our code.
           </p>
           <div className="flex md:-[100%] flex-col m-auto w-[75%] md:flex-row mt-16 gap-4">
-            <button className="inline-flex items-center gap-4 border border-white/15 px-6 h-12 rounded-lg hover:bg-white hover:text-black">
+            <button className="inline-flex items-center gap-4 border border-white/15 px-6 h-12 rounded-lg hover:bg-white hover:text-black transition-colors duration-300">
               <span className="font-bold">Explore my work here</span>
               <ArrowDown className="size-4" />
             </button>
-            <button className="inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-lg hover:bg-transparent hover:text-white">
+            <button className="inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-lg hover:bg-transparent hover:text-white transition-colors duration-300">
               <span>🌐</span>
               <span className="font-semibold">Let&apos;s Connect</span>
             </button>
@@ -171,7 +162,7 @@ export const HeroSection = () => {
             <Image
               alt="hero image next"
               src={images[(currentImageIndex + 1) % images.length]}
-              className={`object-cover object-center absolute inset-0 transform transition-all duration-5000 ease-in-out ${
+              className={`object-cover object-center absolute inset-0 transform transition-all duration-1000 ease-in-out ${
                 isTransitioning
                   ? "translate-x-0 opacity-100"
                   : "-translate-x-full opacity-0"
