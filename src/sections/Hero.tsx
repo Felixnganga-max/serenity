@@ -40,7 +40,7 @@ export const HeroSection = () => {
       }, index * 2000); // Delay for each line to start typing
       return () => clearTimeout(timeout);
     });
-  }, []);
+  }, [lines]);
 
   useEffect(() => {
     const interval = setInterval(() => {

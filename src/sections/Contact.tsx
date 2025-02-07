@@ -1,27 +1,53 @@
-import React, { useState } from 'react';
-import { FaFacebook, FaInstagram, FaWhatsapp, FaTiktok, FaEnvelope } from 'react-icons/fa';
+import React, { useState } from "react";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaWhatsapp,
+  FaTiktok,
+  FaEnvelope,
+} from "react-icons/fa";
 import ArrowUp from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 
 export const ContactSection = () => {
   const [isEmailOpen, setIsEmailOpen] = useState(false);
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const socialLinks = [
-    { Icon: FaFacebook, href: "https://facebook.com/your.profile", color: "text-blue-600" },
-    { Icon: FaInstagram, href: "https://instagram.com/your.profile", color: "text-pink-500" },
-    { Icon: FaWhatsapp, href: "https://wa.me/yourphonenumber", color: "text-green-500" },
-    { Icon: FaTiktok, href: "https://tiktok.com/@your.profile", color: "text-white" },
-    { Icon: FaEnvelope, onClick: () => setIsEmailOpen(true), color: "text-red-500" }
+    {
+      Icon: FaFacebook,
+      href: "https://facebook.com/your.profile",
+      color: "text-blue-600",
+    },
+    {
+      Icon: FaInstagram,
+      href: "https://instagram.com/your.profile",
+      color: "text-pink-500",
+    },
+    {
+      Icon: FaWhatsapp,
+      href: "https://wa.me/yourphonenumber",
+      color: "text-green-500",
+    },
+    {
+      Icon: FaTiktok,
+      href: "https://tiktok.com/@your.profile",
+      color: "text-white",
+    },
+    {
+      Icon: FaEnvelope,
+      onClick: () => setIsEmailOpen(true),
+      color: "text-red-500",
+    },
   ];
 
   const handleSendEmail = () => {
     // Implement email sending logic
-    console.log('Sending email:', { email, message });
+    console.log("Sending email:", { email, message });
     setIsEmailOpen(false);
-    setEmail('');
-    setMessage('');
+    setEmail("");
+    setMessage("");
   };
 
   return (
@@ -37,18 +63,19 @@ export const ContactSection = () => {
           <div className="flex flex-col gap-8 md:gap-16 justify-center md:flex-row">
             <div>
               <h2 className="font-serif text-2xl md:text-xl">
-                Let's create something amazing together
+                Let us create something amazing together
               </h2>
               <p className="txt-sm mt-2 md:text-base">
-                Ready to bring your next project to life? Let's connect and discuss how we can live your dream by getting your project done.
+                Ready to bring your next project to life? Let us connect and
+                discuss how we can live your dream by getting your project done.
               </p>
               <div className="flex space-x-4 mt-6 justify-center md:justify-start">
                 {socialLinks.map(({ Icon, href, onClick, color }) => (
-                  <a 
-                    key={color} 
+                  <a
+                    key={color}
                     href={href}
                     onClick={onClick}
-                    target="_blank" 
+                    target="_blank"
                     rel="noopener noreferrer"
                     className={`
                       ${color} 
@@ -75,31 +102,33 @@ export const ContactSection = () => {
       {isEmailOpen && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
           <div className="bg-gray-900 rounded-2xl w-full max-w-md p-8 relative border border-white/10 shadow-2xl">
-            <button 
+            <button
               onClick={() => setIsEmailOpen(false)}
               className="absolute top-4 right-4 text-white/50 hover:text-white"
             >
               ✕
             </button>
 
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Send Us a Message</h2>
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">
+              Send Us a Message
+            </h2>
 
             <div className="space-y-4">
-              <input 
+              <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your Email Address"
                 className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white"
               />
-              <textarea 
+              <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Describe your project..."
                 rows={4}
                 className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white"
               />
-              <button 
+              <button
                 onClick={handleSendEmail}
                 disabled={!email || !message}
                 className="w-full bg-blue-500 text-white py-3 rounded-lg"
