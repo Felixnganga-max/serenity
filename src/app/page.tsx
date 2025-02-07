@@ -66,7 +66,7 @@ export default function Home() {
           <nav
             className={`${
               isMenuOpen ? "flex" : "hidden"
-            } flex-col md:flex md:flex-row md:gap-4 gap-2 p-4 md:p-0 absolute md:static top-full left-0 w-full md:w-auto backdrop-blur border md:border-0 rounded-lg md:rounded-none`}
+            } text-black flex-col md:flex md:flex-row md:gap-4 gap-2 p-4 md:p-0 absolute md:static top-full left-0 w-full md:w-auto backdrop-blur-3xl border md:border-0 rounded-lg md:rounded-none`}
           >
             {navItems.map((item, index) => (
               <motion.a
