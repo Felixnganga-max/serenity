@@ -6,6 +6,7 @@ import {
   FaTiktok,
   FaEnvelope,
 } from "react-icons/fa";
+import Image from "next/image"; // Correct import for Next.js images
 import ArrowUp from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 
@@ -43,7 +44,6 @@ export const ContactSection = () => {
   ];
 
   const handleSendEmail = () => {
-    // Implement email sending logic
     console.log("Sending email:", { email, message });
     setIsEmailOpen(false);
     setEmail("");
@@ -66,33 +66,37 @@ export const ContactSection = () => {
                 Let us create something amazing together
               </h2>
               <p className="txt-sm mt-2 md:text-base">
-                Ready to bring your next project to life? Let us connect and
-                discuss how we can live your dream by getting your project done.
+                Ready to bring your next project to life? Let&apos;s connect and
+                discuss how we can make your dream a reality.
               </p>
               <div className="flex space-x-4 mt-6 justify-center md:justify-start">
-                {socialLinks.map(({ Icon, href, onClick, color }) => (
-                  <a
-                    key={color}
-                    href={href}
-                    onClick={onClick}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`
-                      ${color} 
-                      hover:scale-110 
-                      transition-transform 
-                      duration-300
-                    `}
-                  >
-                    <Icon size={24} />
-                  </a>
-                ))}
+                {socialLinks.map(({ Icon, href, onClick, color }) =>
+                  href ? (
+                    <a
+                      key={color}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${color} hover:scale-110 transition-transform duration-300`}
+                    >
+                      <Icon size={24} />
+                    </a>
+                  ) : (
+                    <button
+                      key={color}
+                      onClick={onClick}
+                      className={`${color} hover:scale-110 transition-transform duration-300`}
+                    >
+                      <Icon size={24} />
+                    </button>
+                  )
+                )}
               </div>
             </div>
             <div>
               <button className="text-white bg-gray-900 w-max border border-gray-950 inline-flex items-center px-6 h-[48px] rounded-xl gap-2 mt-8">
                 <span className="font-semibold">Contact Me</span>
-                <ArrowUp className="size-4" />
+                <Image src={ArrowUp} alt="Arrow Up" width={16} height={16} />
               </button>
             </div>
           </div>
@@ -131,7 +135,7 @@ export const ContactSection = () => {
               <button
                 onClick={handleSendEmail}
                 disabled={!email || !message}
-                className="w-full bg-blue-500 text-white py-3 rounded-lg"
+                className="w-full bg-blue-500 text-white py-3 rounded-lg disabled:bg-blue-300"
               >
                 Send Message
               </button>
