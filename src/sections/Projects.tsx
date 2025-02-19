@@ -7,10 +7,25 @@ import grainImage from "@/assets/images/grain.jpg";
 import netflixImage from "@/assets/images/netflix.png";
 import shopImage from "@/assets/images/shop.png";
 import topmazImage from "@/assets/images/topmaz.png";
+import bluescope from "@/assets/images/bluescope.png";
+import ikafries from "@/assets/images/ikafries.png";
 
 const portfolioProjects = [
   {
-    company: "Personal Project",
+    company: "BlueScope Supplies Limited",
+    year: "2024",
+    title: "Interactive Online Store & Projects Portfolio",
+    alt: "An modern software to enable the company showcase its products with modern technologies, made by Serenity Software.",
+    results: [
+      { title: "Filtering products on varied metrics" },
+      { title: "Dynamic and smooth transitions" },
+      { title: "Highly secured and scalable" },
+    ],
+    link: "https://bluescope-tau.vercel.app/",
+    image: bluescope,
+  },
+  {
+    company: "Topmaz Automotives",
     year: "2024",
     title: "Automotive E-commerce and Inventory System",
     alt: "automotive management system, with inventory and advanced security by serenity softwares and technological innovations",
@@ -39,33 +54,20 @@ const portfolioProjects = [
     image: netflixImage,
   },
   {
-    company: "Personal Project",
+    company: "Ika Fries Fast Foods",
     year: "2024",
-    title: "Interactive Online Shopping Store",
-    alt: "Modern E-commerce website with inventory management, payment integration, and user authentication by Serenity Software.",
-    results: [
-      { title: "Filtering products on varied metrics" },
-      { title: "Dynamic and smooth transitions" },
-      { title: "Still working on the backend in nodejs" },
-    ],
-    link: "https://shop-lemon.vercel.app/",
-    image: shopImage,
-  },
-  {
-    company: "Personal Project",
-    year: "2024",
-    title: "Automotive E-commerce and Inventory System",
-    alt: "automotive management system, with inventory and advanced security by serenity softwares and technological innovations",
+    title: "An E-commerce food ordering application",
+    alt: "Fast food ordering application, with inventory and advanced security by serenity softwares and technological innovations",
     results: [
       { title: "Seemless user experience" },
       {
         title:
           "Secure Authentication with jwt tokens and password hashing algorithms",
       },
-      { title: "Payment intergration with Stripe(Stripe Testmode)" },
+      { title: "Payment intergration with M-PESA" },
     ],
-    link: "https://www.topmazautospares.com/",
-    image: topmazImage,
+    link: "https://ika-nine.vercel.app/",
+    image: ikafries,
   },
   {
     company: "Personal Project",
